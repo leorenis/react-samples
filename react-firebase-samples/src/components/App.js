@@ -1,19 +1,28 @@
 import React from 'react'
+import { Router, Switch, Route } from 'react-router-dom'
+import { Provider } from 'react-redux'
 import { Grid } from '@material-ui/core'
+
 import Header from './Header'
-import Content from './Content'
+import Dashboard from './Dashboard'
+import SignIn from './SignIn'
+import store from '../store/configureStore'
+import history from '../history'
+import PageNotFound from './PageNotFound'
 
 const App = () => (
-  <Grid container direction='column'>
-    <Header />
-    <Grid item container>
-      <Grid item xs={false} sm={2} />
-      <Grid item xs={12} sm={8}>
-        <Content />
-      </Grid>
-      <Grid item xs={false} sm={2} />
+  <Provider store={store}>
+    <Grid container direction='column'>
+      <Header />
+      <Router history={history}>
+        <Switch>
+          <Route exact path={'/sigin'} component={SignIn} />
+          <Route exact path={'/'} component={Dashboard} />
+          <Route component={PageNotFound} />
+        </Switch>
+      </Router>
     </Grid>
-  </Grid>
+  </Provider>
 )
 
 export default App
