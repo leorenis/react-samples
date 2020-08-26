@@ -11,23 +11,9 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Avatar from '@material-ui/core/Avatar'
 import IconButton from '@material-ui/core/IconButton'
 import ShareIcon from '@material-ui/icons/Share'
+import styles from './styles'
 
-const useStyles = makeStyles({
-  root: {
-    minWidth: 150
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)'
-  },
-  title: {
-    fontSize: 14
-  },
-  pos: {
-    marginBottom: 12
-  }
-})
+const useStyles = makeStyles(styles)
 
 const ContentCard = props => {
   const classes = useStyles()
