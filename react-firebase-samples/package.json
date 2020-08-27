@@ -12,6 +12,7 @@
     "axios": "^0.20.0",
     "classnames": "^2.2.6",
     "dayjs": "^1.8.34",
+    "firebase": "^7.19.0",
     "formik": "^2.1.5",
     "formik-material-ui": "^3.0.0-alpha.0",
     "lodash": "^4.17.20",
