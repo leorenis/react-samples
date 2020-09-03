@@ -23,5 +23,6 @@ exports.toTheDojo = functions.https.onRequest((request, response) => {
 
 // HTTP callable function
 exports.sayHello = functions.https.onCall((data, context) => {
-    return `Hello, ninjas`
+    const { name } = data
+    return `Hello, ${name}`
 })
