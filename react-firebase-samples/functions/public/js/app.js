@@ -17,7 +17,7 @@ requestModal.addEventListener('click', e => {
 const button = document.querySelector('.call')
 button.addEventListener('click', () => {
   // Get function reference
-  const sayHello = firebase.functions().httpsCallable('sayHello')
+  const sayHello = global.firebase.functions().httpsCallable('sayHello')
   sayHello({ name: 'LRS' }).then(result => {
     console.log(result.data)
   })
