@@ -7,7 +7,7 @@ requestLink.addEventListener('click', () => {
 })
 
 // close request modal
-requestModal.addEventListener('click', (e) => {
+requestModal.addEventListener('click', e => {
   if (e.target.classList.contains('new-request')) {
     requestModal.classList.remove('open')
   }
