@@ -9,8 +9,14 @@ const functions = require('firebase-functions')
 // });
 
 
-// HTTP request
+// HTTP request 1
 exports.randomNumber = functions.https.onRequest((request, response) => {
     const number = Math.round(Math.random() * 100)
     response.send(number.toString())
+})
+
+// HTTP request 2 
+exports.toTheDojo = functions.https.onRequest((request, response) => {
+    const url = 'https://www.google.com'
+    response.redirect(url)
 })
