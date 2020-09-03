@@ -20,3 +20,8 @@ exports.toTheDojo = functions.https.onRequest((request, response) => {
     const url = 'https://www.google.com'
     response.redirect(url)
 })
+
+// HTTP callable function
+exports.sayHello = functions.https.onCall((data, context) => {
+    return `Hello, ninjas`
+})
