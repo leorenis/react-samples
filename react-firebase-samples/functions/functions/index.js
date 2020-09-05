@@ -8,7 +8,6 @@ const functions = require('firebase-functions')
 //   response.send("Hello from Firebase!");
 // });
 
-
 // HTTP request 1
 exports.randomNumber = functions.https.onRequest((request, response) => {
     const number = Math.round(Math.random() * 100)
