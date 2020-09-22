@@ -7,6 +7,10 @@ import {
 
 export const startFirebaseAuth = authChangeCallback => dispatch => {
 // TODO
+  return {
+    type: START_FIREBASE_AUTH,
+    payload: {}
+  }
 }
 
 export const signIn = userId => ({
