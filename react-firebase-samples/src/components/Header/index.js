@@ -16,7 +16,7 @@ const Header = () => {
     <AppBar position='static'>
       <Toolbar>
         <Typography className={classes.typographyStyles}>
-          Sumday
+          Firebase POC
         </Typography>
         <AcUnitRoundedIcon />
       </Toolbar>
