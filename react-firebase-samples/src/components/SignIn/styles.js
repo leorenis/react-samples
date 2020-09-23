@@ -1,4 +1,7 @@
 export default theme => ({
+  card: {
+    marginTop: '8%'
+  },
   main: {
     width: 'auto',
     display: 'block', // Fix IE 11 issue.
