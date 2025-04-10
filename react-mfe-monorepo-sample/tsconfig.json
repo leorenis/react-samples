@@ -10,16 +10,10 @@
       "path": "./apps/react-mfe-monorepo-sample"
     },
     {
-      "path": "./apps/react-mfe-monorepo-sample/apps/products-e2e"
+      "path": "./apps/products-e2e"
     },
     {
-      "path": "./apps/react-mfe-monorepo-sample/apps/products"
-    },
-    {
-      "path": "./apps/react-mfe-monorepo-sample/productsnew-e2e"
-    },
-    {
-      "path": "./apps/react-mfe-monorepo-sample/productsnew"
+      "path": "./apps/products"
     }
   ]
 }
