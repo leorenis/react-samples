@@ -1,0 +1,10 @@
+{
+  "name": "react-mfe-monorepo-sample-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "react-mfe-monorepo-sample"
+    ]
+  }
+}
