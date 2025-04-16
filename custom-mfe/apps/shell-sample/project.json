@@ -1,7 +1,7 @@
 {
-  "name": "custom-mfe",
+  "name": "shell-sample",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/custom-mfe/src",
+  "sourceRoot": "apps/shell-sample/src",
   "projectType": "application",
   "tags": [],
   "targets": {
@@ -11,14 +11,14 @@
       "defaultConfiguration": "production",
       "options": {
         "target": "web",
-        "outputPath": "dist/apps/custom-mfe",
-        "index": "apps/custom-mfe/src/index.html",
-        "main": "apps/custom-mfe/src/main.tsx",
-        "tsConfig": "apps/custom-mfe/tsconfig.app.json",
-        "rspackConfig": "apps/custom-mfe/rspack.config.ts",
+        "outputPath": "dist/apps/shell-sample",
+        "index": "apps/shell-sample/src/index.html",
+        "main": "apps/shell-sample/src/main.tsx",
+        "tsConfig": "apps/shell-sample/tsconfig.app.json",
+        "rspackConfig": "apps/shell-sample/rspack.config.ts",
         "assets": [
-          "apps/custom-mfe/src/favicon.ico",
-          "apps/custom-mfe/src/assets"
+          "apps/shell-sample/src/favicon.ico",
+          "apps/shell-sample/src/assets"
         ]
       },
       "configurations": {
@@ -35,12 +35,12 @@
     "serve": {
       "executor": "@nx/rspack:dev-server",
       "options": {
-        "buildTarget": "custom-mfe:build:development"
+        "buildTarget": "shell-sample:build:development"
       },
       "configurations": {
         "development": {},
         "production": {
-          "buildTarget": "custom-mfe:build:production"
+          "buildTarget": "shell-sample:build:production"
         }
       }
     },
@@ -48,7 +48,7 @@
       "executor": "@nx/web:file-server",
       "dependsOn": ["build"],
       "options": {
-        "buildTarget": "custom-mfe:build",
+        "buildTarget": "shell-sample:build",
         "spa": true
       }
     }
