@@ -1,11 +1,13 @@
-// Uncomment this line to use CSS modules
-// import styles from './app.module.css';
-import NxWelcome from './nx-welcome';
+//@ts-expect-error
+import RemoteButton from  'products/RemoteButton'
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="custom-mfe" />
+      <p>
+        Hi, I'am the HOST.
+      </p>
+      <RemoteButton />
     </div>
   );
 }
