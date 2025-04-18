@@ -1,5 +1,4 @@
 import { ModuleFederationConfig } from '@nx/module-federation';
-import { library } from '@rspack/core';
 
 const sharedLibraries = [
   "react",
