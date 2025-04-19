@@ -16,7 +16,7 @@ export async function loadRemoteFromConfigService(scope: string): Promise<string
   return Promise.resolve(remoteMap[scope]);
 }
 
-export default function useRemote({ scope, module }: RemoteDetails) {
+export default function useRemote<T = unknown>({ scope, module }: RemoteDetails) {
   const LazyComponent = lazy(async () => {
     const remoteUrl = await loadRemoteFromConfigService(scope);
 
@@ -24,13 +24,13 @@ export default function useRemote({ scope, module }: RemoteDetails) {
       { name: scope, entry: remoteUrl },
     ]);
 
-    return await loadRemote(`${scope}/${module}`) as unknown as Promise<{default: ComponentType<unknown>}>;
+    return await loadRemote<T>(`${scope}/${module}`) as unknown as Promise<{default: ComponentType<T>}>;
   });
 
   return (props: any) => (
-    <ErrorBoundary 
+    <ErrorBoundary
       fallback={<div>Ut oh!</div>}
-      onError={(error) => console.log(`Error: There is some error to loadremote from ${scope}/${module}`)}
+      onError={(error) => console.log(`Error: There is some error to loadremote from ${scope}/${module}`, error)}
     >
       <Suspense fallback={<div>Loading..</div>}>
         <LazyComponent {...props} />
