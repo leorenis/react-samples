@@ -1,0 +1,22 @@
+{
+  "streams": [
+    {
+      "title": "teste",
+      "description": "teste",
+      "userId": "110531691641734934680",
+      "id": 1
+    },
+    {
+      "title": "Refactoring in video",
+      "description": "Testando o update test",
+      "userId": "110531691641734934680",
+      "id": 11
+    },
+    {
+      "title": "Stream edit",
+      "description": "test",
+      "userId": "110531691641734934680",
+      "id": 12
+    }
+  ]
+}
