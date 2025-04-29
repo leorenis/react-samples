@@ -1,6 +1,6 @@
 import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
-import Button from './components/remote-button';
+import ProductsList from './components/ProductsList/ProductsList';
 import './styles.css';
 
 const root = ReactDOM.createRoot(
@@ -11,6 +11,6 @@ root.render(
     <p>
       You are running in the remote
     </p>
-    <Button />
+    <ProductsList />
   </StrictMode>
 );

@@ -8,7 +8,7 @@ const sharedLibraries = [
 const config: ModuleFederationConfig = {
   name: 'products',
   exposes: {
-    './RemoteButton': './src/components/remote-button.tsx',
+    './ProductsList': './src/components/ProductsList/ProductsList.tsx',
     './Types': './src/types.d.ts',
   },
   shared: (libraryName, sharedConfig) => {

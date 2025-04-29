@@ -1,9 +1,9 @@
 import useRemote from '../hooks/useRemote';
-import RemoteButtonType from 'products/RemoteButton';
+import ProductsListType from 'products/ProductsList';
 import styles from './app.module.css';
 
 export function App() {
-  const RemoteButton = useRemote<typeof RemoteButtonType>({ scope: 'products', module: 'RemoteButton' });
+  const ProductsList = useRemote<typeof ProductsListType>({ scope: 'products', module: 'ProductsList' });
 
   return (
     <div className={styles.container}>
@@ -16,7 +16,7 @@ export function App() {
        </header>
        <main className={styles.content}>
          <div>
-           <RemoteButton />
+           <ProductsList />
          </div>
        </main>
      </div>
