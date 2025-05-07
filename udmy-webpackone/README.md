@@ -30,9 +30,15 @@ npx webpack --mode development
 
 Production mode
 ```zsh
-npx webpack --mode development
+npx webpack --mode production
 ```
 
-```zsh
-npx webpack --mode production
+### Run Webpack via npm script (Recommended):
+
+```json
+    "scripts": {
+      "build": "webpack --config webpack.config.js",
+      "watch": "webpack --watch --config webpack.config.js",
+      "start": "webpack serve --config webpack.config.js" 
+    }
 ```
