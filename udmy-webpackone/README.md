@@ -20,6 +20,11 @@ npm install --save-dev webpack@5.97.1
 npm install --save-dev webpack-cli@6.0.1
 ```
 
+Instaling math js to training dependencies resolution on webpack.
+```bash
+npm install mathjs@14.0.1 --save
+```
+
 ### Running webpack
 
 To running webpack `--mode development`
