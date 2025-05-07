@@ -47,3 +47,7 @@ npx webpack --mode production
       "start": "webpack serve --config webpack.config.js" 
     }
 ```
+
+
+### See more
+- https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
