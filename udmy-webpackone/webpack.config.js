@@ -1,7 +1,15 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    index: {
+      import: './src/index.js',
+      dependOn: 'math'
+    },
+    math: {
+      import: './src/lib/math.js'
+    },
+  },
   mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
