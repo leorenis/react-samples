@@ -5,7 +5,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "test": "vitest --run"
+    "test": "vitest --run",
+    "test:coverage": "vitest run --coverage"
   },
   "author": "leorenis",
   "license": "ISC",
