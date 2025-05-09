@@ -58,10 +58,15 @@ npx webpack --mode production
 [Sample here](https://github.com/leorenis/react-samples/tree/master/udmy-webpack/5-libs)
 
 Installing vitest. 
-```
+```zsh
 npm install -D vitest@2.1.8 @vitest/coverage-v8@2.1.8
 ```
 
+Prettier
+
+```bash
+npm install -D --save-exact prettier
+```
 
 ### See more
 - https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
