@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "test": "vitest --run",
-    "test:clea": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage"
   },
   "author": "leorenis",
   "license": "ISC",
