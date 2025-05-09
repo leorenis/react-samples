@@ -53,5 +53,15 @@ npx webpack --mode production
 ```
 
 
+### Package manager - Libs
+
+[Sample here](https://github.com/leorenis/react-samples/tree/master/udmy-webpack/5-libs)
+
+Installing vitest. 
+```
+npm install -D vitest@2.1.8 @vitest/coverage-v8@2.1.8
+```
+
+
 ### See more
 - https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
