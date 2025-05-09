@@ -4,8 +4,8 @@
   "description": "Learning webpack",
   "main": "src/index.js",
   "scripts": {
-    "build-dev": "webpack --mode development",
-    "build-production": "webpack --mode production",
+    "build-dev": "webpack --config configs/webpack.dev.config.js",
+    "build-production": "webpack --config configs/webpack.prod.config.js",
     "watch": "webpack --watch --config webpack.config.js",
     "start": "webpack serve --config webpack.config.js"
   },
