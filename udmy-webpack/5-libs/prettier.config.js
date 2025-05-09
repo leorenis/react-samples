@@ -4,7 +4,7 @@
  * 
 */
 const config = {
-  files: "**/*.mjs",
+  // files: "**/*.mjs",
   trailingComma: "es5",
   tabWidth: 2,
   semi: true,
