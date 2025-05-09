@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "test": "vitest --run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "prettier": "prettier \"src/**/*.mjs\" --write --ignore-unknown"
   },
   "author": "leorenis",
   "license": "ISC",
