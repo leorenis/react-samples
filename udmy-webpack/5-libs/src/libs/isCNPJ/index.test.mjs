@@ -18,7 +18,7 @@ describe('isCNPJ Test case', () => {
     }
   )
 
-  it.each(['11.222.333/0001-91', '11.222.333/0001-82'])(
+  it.each(['11.222.333/0001-91', '11.222.333/0001-82',  '11.222.001/0001-00'])(
     'CNPJ should have RIGHT digit calculation: %s',
     (cnpj) => {
       expect(isCNPJ(cnpj)).toBe(false)

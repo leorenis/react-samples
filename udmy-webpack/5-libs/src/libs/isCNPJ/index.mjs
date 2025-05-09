@@ -6,17 +6,17 @@ export function isCNPJ(cnpj) {
 
   // Check if the CNPJ has exactly 14 digits or is a known invalid sequence
   if (cnpj.length !== 14 || /^(\d)\1{13}$/.test(cnpj)) {
-      return false
+    return false
   }
 
   // Helper function to calculate verification digit
   function calculateDigit(cnpjArray, multipliers) {
-      let sum = 0
-      for (let i = 0; i < multipliers.length; i++) {
-          sum += cnpjArray[i] * multipliers[i]
-      }
-      const remainder = sum % 11
-      return remainder < 2 ? 0 : 11 - remainder
+    let sum = 0
+    for (let i = 0; i < multipliers.length; i++) {
+      sum += cnpjArray[i] * multipliers[i]
+    }
+    const remainder = sum % 11
+    return remainder < 2 ? 0 : 11 - remainder
   }
 
   // Convert CNPJ string to an array of numbers
@@ -29,17 +29,17 @@ export function isCNPJ(cnpj) {
   // Validate the first verification digit
   const firstDigit = calculateDigit(cnpjArray.slice(0, 12), firstMultipliers)
   if (firstDigit !== cnpjArray[12]) {
-      return false
+    return false
   }
 
   // Validate the second verification digit
   const secondDigit = calculateDigit(
-      cnpjArray.slice(0, 13),
-      secondMultipliers
+    cnpjArray.slice(0, 13),
+    secondMultipliers
   )
 
   if (secondDigit !== cnpjArray[13]) {
-      return false
+    return false
   }
 
   // If all checks pass, the CNPJ is valid
