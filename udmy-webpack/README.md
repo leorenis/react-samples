@@ -62,10 +62,14 @@ Installing vitest.
 npm install -D vitest@2.1.8 @vitest/coverage-v8@2.1.8
 ```
 
-Prettier
+### Prettier && Husky && Lint staged
 
 ```bash
 npm install -D --save-exact prettier
+```
+
+```zsh
+npm install -D husky lint-staged
 ```
 
 ### See more
