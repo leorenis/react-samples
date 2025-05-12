@@ -48,7 +48,15 @@ npx webpack --mode production
     "scripts": {
       "build": "webpack --config webpack.config.js",
       "watch": "webpack --watch --config webpack.config.js",
-      "start": "webpack serve --config webpack.config.js" 
+      "start": "webpack serve --config webpack.config.js",
+      "lint": "eslint",
+      "lint:fix": "eslint --fix",
+      "prettier": "prettier . --check",
+      "prettier:fix": "prettier . --write --ignore-unknown",
+      "prepare": "husky",
+      "test": "vitest --run",
+      "test:coverage": "vitest run --coverage",
+      "pre-commit": "npm run prettier && npm run lint && npm run test"
     }
 ```
 
@@ -72,5 +80,17 @@ npm install -D --save-exact prettier
 npm install -D husky lint-staged
 ```
 
+```zsh
+npx husky init
+```
+
+```json
+  "lint-staged": {
+    "src/**/*.js": "npm run pre-commit"
+  },
+```
+
 ### See more
 - https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
+- https://typicode.github.io/husky/
+- https://github.com/lint-staged/lint-staged
