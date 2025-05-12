@@ -16,6 +16,8 @@
   "description": "Training libs with vitest",
   "devDependencies": {
     "@vitest/coverage-v8": "^2.1.8",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
     "prettier": "3.5.3",
     "vitest": "^2.1.8"
   }
