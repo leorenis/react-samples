@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { isCNPJ } from './index.mjs';
+import { isCNPJ } from './index.js';
 
 describe('isCNPJ Test case', () => {
   it.each([null, undefined, '', ' '])("CNPJ should NOT be '%s'", (cnpj) =>

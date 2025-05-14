@@ -1,4 +1,4 @@
-import { isCNPJ } from './isCNPJ/index.mjs';
-import { isCPF } from './isCPF/index.mjs';
+import { isCNPJ } from './isCNPJ/index.js';
+import { isCPF } from './isCPF/index.js';
 
 export { isCNPJ, isCPF };
