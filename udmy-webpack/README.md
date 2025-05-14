@@ -60,6 +60,22 @@ npx webpack --mode production
     }
 ```
 
+### Common JS Modules vs ECMA
+**CommonJS** is a module system for JavaScript, primarily used in server-side environments like `Node.js`. CommonJS uses the `require()` function to import modules and `module.exports` or `exports` to export values, functions, or objects. When a module is required for the first time, it is executed and cached. Subsequent calls to `require()` will return the cached version, improving performance.
+
+package.js config:
+```json
+ "type": "commonjs",
+```
+file extension: `.mjs`
+
+**ECMAScript 2015 (ES6)**, they provide a standardized system for importing and exporting functionalities between different files.
+
+package.js config:
+```json
+ "type": "module",
+```
+file extension: `.js`
 
 ### Package manager - Libs
 
