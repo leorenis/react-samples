@@ -96,7 +96,7 @@ npx husky init
 npm init @eslint/config@latest
 ```
 
-```
+```zsh
 Need to install the following packages:
 @eslint/create-config@1.8.2
 Ok to proceed? (y)
@@ -113,7 +113,6 @@ eslint, globals
 ✔ Would you like to install them now? · No / Yes
 ✔ Which package manager do you want to use? · npm
 ☕️Installing...
-
 ```
 
 ### See more
