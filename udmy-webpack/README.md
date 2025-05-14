@@ -67,19 +67,22 @@ npx webpack --mode production
 **CommonJS** is a module system for JavaScript, primarily used in server-side environments like `Node.js`. CommonJS uses the `require()` function to import modules and `module.exports` or `exports` to export values, functions, or objects. When a module is required for the first time, it is executed and cached. Subsequent calls to `require()` will return the cached version, improving performance.
 </details>
 
+file extension: `.mjs`
 package.js config:
 ```json
  "type": "commonjs",
 ```
-file extension: `.mjs`
+<details>
+<summary>ECMAScript 2015 (ES6) modules</summary>
 
 **ECMAScript 2015 (ES6)**, they provide a standardized system for importing and exporting functionalities between different files.
+</details>
 
+file extension: `.js`
 package.js config:
 ```json
  "type": "module",
 ```
-file extension: `.js`
 
 ### Package manager - Libs
 
