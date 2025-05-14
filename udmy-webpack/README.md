@@ -90,6 +90,32 @@ npx husky init
   },
 ```
 
+### ESLint
+
+```bash
+npm init @eslint/config@latest
+```
+
+```
+Need to install the following packages:
+@eslint/create-config@1.8.2
+Ok to proceed? (y)
+
+What do you want to lint? · javascript
+✔ How would you like to use ESLint? · syntax
+✔ What type of modules does your project use? · esm
+✔ Which framework does your project use? · none
+✔ Does your project use TypeScript? · no / yes
+✔ Where does your code run? · browser, node
+The config that you've selected requires the following dependencies:
+
+eslint, globals
+✔ Would you like to install them now? · No / Yes
+✔ Which package manager do you want to use? · npm
+☕️Installing...
+
+```
+
 ### See more
 - https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
 - https://typicode.github.io/husky/
