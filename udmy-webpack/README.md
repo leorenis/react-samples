@@ -112,6 +112,9 @@ npx husky init
 npm init @eslint/config@latest
 ```
 
+<details>
+<summary>Output eslint installation</summary>
+
 ```zsh
 Need to install the following packages:
 @eslint/create-config@1.8.2
@@ -131,7 +134,11 @@ eslint, globals
 ☕️Installing...
 ```
 
+</details>
+
 ### See more
 - https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
 - https://typicode.github.io/husky/
 - https://github.com/lint-staged/lint-staged
+- https://www.typescriptlang.org/docs/
+- https://www.typescriptlang.org/docs/handbook/utility-types.html
