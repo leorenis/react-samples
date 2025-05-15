@@ -7,12 +7,13 @@ Training webpack 5.
 - Webpack CLI
 - Webpack Merge
 - EcmaScript
+- @vitest/coverage-v8
+- Vitest
 - Prettier
 - Husky
 - lint-staged
 - @eslint/config@latest
-- @vitest/coverage-v8
-- Vitest
+- Typescript
 
 Using node 22 by `.nvmrc`
 ```bash
@@ -151,7 +152,14 @@ eslint, globals
 ✔ Which package manager do you want to use? · npm
 ☕️Installing...
 ```
+</details>
 
+
+### Typescript
+<details>
+<summary>TypeScript is JavaScript with syntax for types.</summary>
+
+TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
 </details>
 
 ### See more
