@@ -162,8 +162,14 @@ eslint, globals
 TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
 </details>
 
+To install
 ```zsh
 npm install typescript --save-dev
+```
+
+Running
+```zsh
+npx tsc main.ts
 ```
 
 ### See more
