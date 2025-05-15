@@ -1,0 +1,19 @@
+# dependencies
+
+/node_modules
+node_modules
+
+# Environments
+.env
+
+# testing
+/coverage
+
+# production
+/build
+/dist
+
+# misc
+.DS_Store
+.idea
+*.iml
