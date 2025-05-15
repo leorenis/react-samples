@@ -196,4 +196,5 @@ npx tsc main.ts
 - https://typicode.github.io/husky/
 - https://github.com/lint-staged/lint-staged
 - https://www.typescriptlang.org/docs/
+- https://www.typescriptlang.org/tsconfig/#module
 - https://www.typescriptlang.org/docs/handbook/utility-types.html
