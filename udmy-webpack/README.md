@@ -5,7 +5,14 @@ Training webpack 5.
 ### Setup
 - Webpack
 - Webpack CLI
+- Webpack Merge
 - EcmaScript
+- Prettier
+- Husky
+- lint-staged
+- @eslint/config@latest
+- @vitest/coverage-v8
+- Vitest
 
 Using node 22 by `.nvmrc`
 ```bash
@@ -44,6 +51,9 @@ npx webpack --mode production
 
 ### Run Webpack via npm script (Recommended):
 
+<details>
+<summary> package.json script config samples </summary>
+
 ```json
     "scripts": {
       "build": "webpack --config webpack.config.js",
@@ -59,6 +69,7 @@ npx webpack --mode production
       "pre-commit": "npm run prettier && npm run lint && npm run test"
     }
 ```
+</details>
 
 ### Common JS Modules vs ECMA
 <details>
@@ -67,7 +78,7 @@ npx webpack --mode production
 **CommonJS** is a module system for JavaScript, primarily used in server-side environments like `Node.js`. CommonJS uses the `require()` function to import modules and `module.exports` or `exports` to export values, functions, or objects. When a module is required for the first time, it is executed and cached. Subsequent calls to `require()` will return the cached version, improving performance.
 </details>
 
-file extension: `.mjs`
+file extension: `.mjs`, 
 package.js config:
 ```json
  "type": "commonjs",
@@ -78,7 +89,7 @@ package.js config:
 **ECMAScript 2015 (ES6)**, they provide a standardized system for importing and exporting functionalities between different files.
 </details>
 
-file extension: `.js`
+file extension: `.js`, 
 package.js config:
 ```json
  "type": "module",
