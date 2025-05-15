@@ -172,6 +172,25 @@ Running
 npx tsc main.ts
 ```
 
+<details>
+<summary>tsconfig.json</summary>
+
+```json
+{
+  "include": ["**/*.ts"],
+  "compilerOptions": {
+    "target": "ES2016",
+    "module": "commonjs",
+    "outDir": "./dist/",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  }
+}
+```
+</details>
+
 ### See more
 - https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
 - https://typicode.github.io/husky/
