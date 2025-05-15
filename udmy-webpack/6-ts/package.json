@@ -2,10 +2,13 @@
   "name": "6-ts",
   "version": "1.0.0",
   "description": "training typescript",
-  "main": "main.js",
+  "main": "main.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "leorenis",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
 }
