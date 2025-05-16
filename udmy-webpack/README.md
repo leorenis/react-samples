@@ -167,6 +167,11 @@ To install
 npm install typescript --save-dev
 ```
 
+Installing an specific version, taking the opportunity to install `ts-loader` plugin.
+```zsh
+npm install --save-dev typescript@5.7.2 ts-loader@9.5.1
+```
+
 Running
 ```zsh
 npx tsc main.ts
