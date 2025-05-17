@@ -1,0 +1,31 @@
+import path from 'path'
+
+const config = {
+  entry: {
+    isCPF: './src/libs/isCPF/index.ts',
+    isCNPJ: './src/libs/isCNPJ/index.ts',
+    index: {
+      dependOn: ['isCPF', 'isCNPJ'],
+      import: './src/libs/index.ts',
+    }
+  },
+  output: {
+    path: path.resolve('./dist'),
+    filename: '[name].bundle.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/, // regex: x? indicate that x? is optional.
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', 'js'],
+  },
+  target: 'node10'
+}
+
+export default config
