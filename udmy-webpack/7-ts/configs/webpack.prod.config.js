@@ -1,5 +1,5 @@
 import { merge } from 'webpack-merge'
-import common from './webpack.common.config'
+import common from './webpack.common.config.js'
 
 const configProd = merge(common, {
   mode: 'production',

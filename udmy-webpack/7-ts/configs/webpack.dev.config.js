@@ -1,5 +1,5 @@
-import { merge } from 'webpack'
-import common from './webpack.common.config'
+import { merge } from 'webpack-merge'
+import common from './webpack.common.config.js'
 
 const configDev = merge(common, {
   mode: 'development',
