@@ -1,6 +1,6 @@
 {
   "name": "08-export",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "type": "module",
   "private": true,
@@ -8,7 +8,13 @@
     "build-dev": "webpack --config configs/webpack.dev.config.js",
     "build-production": "webpack --config configs/webpack.prod.config.js",
     "test": "vitest --run",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "v:patch": "npm version patch",
+    "v:minor": "npm version minor",
+    "v:major": "npm version major",
+    "v:patch:full": "npm run test && npm run build-production && npm version patch",
+    "v:minor:full": "npm run test && npm run build-production && npm version minor",
+    "v:major:full": "npm run test && npm run build-production && npm version major"
   },
   "author": "leorenis",
   "license": "ISC",
