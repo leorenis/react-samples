@@ -11,7 +11,8 @@ const config = {
   },
   output: {
     path: path.resolve('./dist'),
-    filename: '[name].bundle.js'
+    filename: '[name].bundle.js',
+    clean: true,
   },
   module: {
     rules: [
