@@ -196,6 +196,47 @@ npx tsc main.ts
 ```
 </details>
 
+<details>
+<summary>tsc: The TypeScript Compiler - Version 5.8.</summary>
+
+```
+npx tsc --help
+```
+Command to see all tsc manual.
+
+```
+tsc
+```
+Compiles the current project (tsconfig.json in the working directory.)
+
+```
+tsc app.ts util.ts
+```
+Ignoring tsconfig.json, compiles the specified files with default compiler options.
+
+```
+tsc -b
+```
+Build a composite project in the working directory.
+
+```
+tsc --init
+```
+Creates a tsconfig.json with the recommended settings in the working directory.
+
+```
+tsc -p ./path/to/tsconfig.json
+```
+Compiles the TypeScript project located at the specified path.
+
+```
+tsc --help --all
+```
+An expanded version of this information, showing all possible compiler options
+
+</details>
+
+
 ### See more
 - https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
 - https://typicode.github.io/husky/
