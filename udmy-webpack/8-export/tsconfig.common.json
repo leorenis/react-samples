@@ -1,0 +1,15 @@
+{
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "src/validation"],
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "allowJs": true,
+    "explainFiles": true,
+    "declaration": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+  }
+}

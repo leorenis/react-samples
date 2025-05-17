@@ -1,18 +1,8 @@
 {
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "src/validation"],
+  "extends": "./tsconfig.common.json",
   "compilerOptions": {
-    "outDir": "./dist/",
-    "allowJs": true,
     "sourceMap": true,
-    "explainFiles": true,
     "module": "ES2020",
     "target": "ES2020",
-    "declaration": true,
-    "strict": true,
-    "moduleResolution": "node",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
   }
 }
