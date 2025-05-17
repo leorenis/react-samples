@@ -67,7 +67,13 @@ npx webpack --mode production
       "prepare": "husky",
       "test": "vitest --run",
       "test:coverage": "vitest run --coverage",
-      "pre-commit": "npm run prettier && npm run lint && npm run test"
+      "pre-commit": "npm run prettier && npm run lint && npm run test",
+      "v:patch": "npm version patch",
+      "v:minor": "npm version minor",
+      "v:major": "npm version major",
+      "v:patch:full": "npm run test && npm run build-production && npm version patch",
+      "v:minor:full": "npm run test && npm run build-production && npm version minor",
+      "v:major:full": "npm run test && npm run build-production && npm version major"
     }
 ```
 </details>
@@ -238,6 +244,21 @@ tsc --help --all
 
 </details>
 
+### Semantic versioning
+
+Changing the version patch: 1.0.`1`
+```zsh
+npm version patch
+```
+<details>
+<summary>Semantic Versioning 2.0.0</summary>
+Given a version number MAJOR.MINOR.PATCH, increment the:
+1. MAJOR version when you make incompatible API changes
+2. MINOR version when you add functionality in a backward compatible manner
+3. PATCH version when you make backward compatible bug fixes
+
+Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
+</details>
 
 ### See more
 - https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
@@ -246,3 +267,4 @@ tsc --help --all
 - https://www.typescriptlang.org/docs/
 - https://www.typescriptlang.org/tsconfig/#module
 - https://www.typescriptlang.org/docs/handbook/utility-types.html
+- https://semver.org/
