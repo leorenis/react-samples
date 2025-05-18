@@ -207,12 +207,12 @@ npx tsc main.ts
 
 ### Common comands
 
-```
+```bash
 npx tsc --help
 ```
 > Command to see all tsc manual.
 
-```
+```bash
 tsc
 ```
 > Compiles the current project (tsconfig.json in the working directory.)
