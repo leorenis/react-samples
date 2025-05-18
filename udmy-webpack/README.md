@@ -232,12 +232,12 @@ tsc --init
 ```
 > Creates a tsconfig.json with the recommended settings in the working directory.
 
-```
+```zsh
 tsc -p ./path/to/tsconfig.json
 ```
 > Compiles the TypeScript project located at the specified path.
 
-```
+```zsh
 tsc --help --all
 ```
 > An expanded version of this information, showing all possible compiler options
