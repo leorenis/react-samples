@@ -12,9 +12,9 @@
     "v:patch": "npm version patch",
     "v:minor": "npm version minor",
     "v:major": "npm version major",
-    "v:patch:full": "npm run test && npm run build-production && npm version patch",
-    "v:minor:full": "npm run test && npm run build-production && npm version minor",
-    "v:major:full": "npm run test && npm run build-production && npm version major"
+    "v:patch:full": "npm run test && npm run build-production && npm run v:patch",
+    "v:minor:full": "npm run test && npm run build-production && npm run v:minor",
+    "v:major:full": "npm run test && npm run build-production && npm run v:major"
   },
   "author": "leorenis",
   "license": "ISC",
