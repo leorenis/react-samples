@@ -216,6 +216,7 @@ npx tsc main.ts
     "moduleResolution": "bundler"
   },
 }
+
 - "target": "ESNext", "module": "ESNext" -> Allow to use modern EcmaScript.
 - `"moduleResolution": "bundler"` -> Allows `import`, `export`. Nor only require common modules.
 ```
