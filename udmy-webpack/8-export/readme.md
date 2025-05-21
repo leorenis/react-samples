@@ -8,7 +8,7 @@ npm i --save @samplesleo/validations
 ## How to use
 
 ```javascript
-import { isCPF, isCNPJ } from @samplesleo/validations
+import { isCPF, isCNPJ } from '@samplesleo/validations'
 
 if (isCPF('1234567890')) {...}
 

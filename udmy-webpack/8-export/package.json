@@ -1,6 +1,6 @@
 {
   "name": "@samplesleo/validations",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "main": "index.bundle.js",
   "type": "module",
   "private": false,
@@ -20,9 +20,9 @@
     "v:minor": "npm version minor",
     "v:major": "npm version major",
     "v:dep": "npm publish --access public",
-    "v:patch:full": "npm run test && npm run build-production && npm run v:patch",
-    "v:minor:full": "npm run test && npm run build-production && npm run v:minor",
-    "v:major:full": "npm run test && npm run build-production && npm run v:major"
+    "v:patch:full": "npm run test && npm run build-production && npm run v:patch && npm run v:dep",
+    "v:minor:full": "npm run test && npm run build-production && npm run v:minor && npm run v:dep",
+    "v:major:full": "npm run test && npm run build-production && npm run v:major && npm run v:dep"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^2.1.8",
