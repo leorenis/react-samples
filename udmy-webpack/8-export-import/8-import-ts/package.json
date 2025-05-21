@@ -1,0 +1,23 @@
+{
+  "name": "8-import-ts",
+  "version": "1.0.0",
+  "description": "import @samplesleo/validations testing",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build-production": "tsc"
+  },
+  "keywords": [
+    "cpf",
+    "cnpj"
+  ],
+  "author": "leorenis",
+  "license": "ISC",
+  "dependencies": {
+    "@samplesleo/validations": "^1.0.6"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2"
+  }
+}
