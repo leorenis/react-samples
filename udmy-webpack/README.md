@@ -200,6 +200,25 @@ npx tsc main.ts
   }
 }
 ```
+
+```json
+{
+  "include": ["src/**/*.ts"],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "moduleResolution": "bundler"
+  },
+}
+- "target": "ESNext", "module": "ESNext" -> Allow to use modern EcmaScript.
+- `"moduleResolution": "bundler"` -> Allows `import`, `export`. Nor only require common modules.
+```
 </details>
 
 <details>
