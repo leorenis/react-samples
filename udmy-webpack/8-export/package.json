@@ -1,11 +1,14 @@
 {
   "name": "@samplesleo/validations",
-  "version": "1.0.4",
-  "main": "index.bundle.js",
+  "version": "1.0.6",
+  "main": "dist/index.bundle.js",
   "type": "module",
   "private": false,
   "author": "leorenis",
   "license": "ISC",
+  "files": [
+    "**/dist/*"
+  ],
   "keywords": [
     "cpf",
     "cnpj"

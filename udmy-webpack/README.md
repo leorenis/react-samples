@@ -277,3 +277,4 @@ npm login
 - https://www.typescriptlang.org/tsconfig/#module
 - https://www.typescriptlang.org/docs/handbook/utility-types.html
 - https://semver.org/
+- https://docs.npmjs.com/cli/v8/configuring-npm/package-json#files
