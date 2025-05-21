@@ -1,0 +1,19 @@
+{
+  "name": "8-import",
+  "version": "1.0.0",
+  "description": "import @samplesleo/validations testing",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cpf",
+    "cnpj"
+  ],
+  "author": "leorenis",
+  "license": "ISC",
+  "dependencies": {
+    "@samplesleo/validations": "^1.0.6"
+  }
+}
