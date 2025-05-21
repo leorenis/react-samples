@@ -261,6 +261,14 @@ Given a version number MAJOR.MINOR.PATCH, increment the:
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
 </details>
 
+<details>
+<summary>npm login</summary>
+
+```bash
+npm login
+```
+</details>
+
 ### See more
 - https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
 - https://typicode.github.io/husky/

@@ -1,9 +1,16 @@
 {
-  "name": "08-export",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@samplesleo/validations",
+  "version": "1.0.1",
+  "main": "index.bundle.js",
   "type": "module",
-  "private": true,
+  "private": false,
+  "author": "leorenis",
+  "license": "ISC",
+  "keywords": [
+    "cpf",
+    "cnpj"
+  ],
+  "description": "Training libs with vitest",
   "scripts": {
     "build-dev": "webpack --config configs/webpack.dev.config.js",
     "build-production": "webpack --config configs/webpack.prod.config.js",
@@ -12,13 +19,11 @@
     "v:patch": "npm version patch",
     "v:minor": "npm version minor",
     "v:major": "npm version major",
+    "v:dep": "npm publish --access public",
     "v:patch:full": "npm run test && npm run build-production && npm run v:patch",
     "v:minor:full": "npm run test && npm run build-production && npm run v:minor",
     "v:major:full": "npm run test && npm run build-production && npm run v:major"
   },
-  "author": "leorenis",
-  "license": "ISC",
-  "description": "Training libs with vitest",
   "devDependencies": {
     "@vitest/coverage-v8": "^2.1.8",
     "vitest": "^2.1.8",
