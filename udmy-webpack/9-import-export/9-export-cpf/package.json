@@ -1,0 +1,32 @@
+{
+  "name": "@samplesleo/input-cpf",
+  "version": "1.0.0",
+  "description": "react training",
+  "main": "dist/index.bundle.js",
+  "type": "module",
+  "author": "leorenis",
+  "license": "ISC",
+  "scripts": {
+    "dev": "webpack serve --config webpack.config.js"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@samplesleo/validations": "^1.0.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.1",
+    "babel-loader": "^9.2.1",
+    "html-webpack-plugin": "^5.6.3",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0",
+    "webpack-merge": "^6.0.1"
+  },
+  "keywords": [
+    "react"
+  ]
+}
