@@ -14,6 +14,8 @@ Training webpack 5.
 - lint-staged
 - @eslint/config@latest
 - Typescript
+- @babel
+- React
 
 Using node 22 by `.nvmrc`
 ```bash
