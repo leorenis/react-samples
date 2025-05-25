@@ -16,6 +16,7 @@ Training webpack 5.
 - Typescript
 - @babel
 - React
+- React-dom
 
 Using node 22 by `.nvmrc`
 ```bash
