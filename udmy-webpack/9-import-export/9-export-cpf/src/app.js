@@ -30,6 +30,12 @@ root.render(
     <div>
       Webpack component
     </div>
-    
+    <CpfInput
+      id='txtCpf'
+      name='cpf'
+      label='CPF'
+      vaue='1234567890'
+      onChange={cpf => console.log(cpf)}
+    />
   </StrictMode>
 )
