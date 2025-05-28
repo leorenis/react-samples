@@ -1,27 +1,30 @@
-import { StrictMode, use, useState } from 'react'
+import React, { StrictMode, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-const CpfInput = (props) => {
+const InputCpf = (props) => {
   const { id, name, label, value, onChange } = props
   const [cpf, setCpf] = useState(value)
 
-  handleChange = (event) => {
+  const handleChange = (event) => {
     setCpf(event.target.value)
     onChange(cpf)
   }
 
   return (
-    <input 
-      key={id} 
-      id={id} 
-      name={name}
-      type='text'
-      value={cpf}
-      placeholder={label}
-      onChange={(e) => handleChange(e)}
-    /> 
+    <React.Fragment>
+      <input
+        key={id} 
+        id={id} 
+        name={name}
+        type='text'
+        value={cpf}
+        placeholder={label}
+        onChange={(e) => handleChange(e)}
+      /> 
+    </React.Fragment>
+    
   )
 }
 
@@ -29,13 +32,15 @@ root.render(
   <StrictMode>
     <div>
       Webpack component
+
+      <InputCpf
+        id='txtCpf'
+        name='cpf'
+        label='CPF'
+        vaue='1234567890'
+        onChange={cpf => console.log(cpf)}
+      />
     </div>
-    <CpfInput
-      id='txtCpf'
-      name='cpf'
-      label='CPF'
-      vaue='1234567890'
-      onChange={cpf => console.log(cpf)}
-    />
+    
   </StrictMode>
 )
