@@ -35,7 +35,7 @@ root.render(
         id='txtCpf'
         name='cpf'
         label='CPF'
-        vaue='1234567890'
+        value='1234567890'
         onChange={cpf => console.log(cpf)}
       />
     </div>
