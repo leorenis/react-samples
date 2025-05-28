@@ -2,7 +2,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin"
 
 const config = {
   mode: 'development',
-  entry: '/src/app.js',
+  entry: '/src/index.js',
   output: {
     publicPath: '/'
   },
@@ -10,7 +10,7 @@ const config = {
     port: 3009,
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ts','.tsx'],
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
@@ -29,7 +29,7 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
+      template: './src/index.html',
       scriptLoading: 'module',
     })
   ]

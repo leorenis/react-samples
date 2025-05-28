@@ -1,11 +1,12 @@
 import React, { StrictMode, useState } from 'react'
+
 import ReactDOM from 'react-dom/client'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 const InputCpf = (props) => {
   const { id, name, label, value, onChange } = props
-  const [cpf, setCpf] = useState(value)
+  const [cpf, setCpf] = useState(value ?? '');
 
   const handleChange = (event) => {
     setCpf(event.target.value)
@@ -20,11 +21,9 @@ const InputCpf = (props) => {
         name={name}
         type='text'
         value={cpf}
-        placeholder={label}
         onChange={(e) => handleChange(e)}
       /> 
     </React.Fragment>
-    
   )
 }
 
