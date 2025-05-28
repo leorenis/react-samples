@@ -15,6 +15,7 @@ const InputCpf = (props) => {
 
   return (
     <React.Fragment>
+      <label>{label}</label>
       <input
         key={id} 
         id={id} 
@@ -30,8 +31,6 @@ const InputCpf = (props) => {
 root.render(
   <StrictMode>
     <div>
-      Webpack component
-
       <InputCpf
         id='txtCpf'
         name='cpf'
@@ -40,6 +39,5 @@ root.render(
         onChange={cpf => console.log(cpf)}
       />
     </div>
-    
   </StrictMode>
 )
