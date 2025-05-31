@@ -27,7 +27,7 @@ const InputCpf = (props) => {
       isValid
     })
 
-    
+    setErrorMsg(isValid ? null : error)
   }
 
   return (
