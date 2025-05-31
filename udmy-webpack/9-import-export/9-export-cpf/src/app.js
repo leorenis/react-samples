@@ -15,15 +15,17 @@ const InputCpf = (props) => {
 
   return (
     <React.Fragment>
-      <label>{label}</label>
-      <input
-        key={id} 
-        id={id} 
-        name={name}
-        type='text'
-        value={cpf}
-        onChange={(e) => handleChange(e)}
-      /> 
+      <fieldset>
+        <legend>{label}</legend>
+        <input
+          key={id}
+          id={id}
+          name={name}
+          type='text'
+          value={cpf}
+          onChange={(e) => handleChange(e)}
+        />
+      </fieldset>
     </React.Fragment>
   )
 }
