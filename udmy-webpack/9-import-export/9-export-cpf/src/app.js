@@ -27,7 +27,7 @@ const InputCpf = (props) => {
       isValid
     })
 
-    setErrorMsg(isValid ? null : error)
+    setErrorMsg(isValid ? null : error ?? 'CPF inválido')
   }
 
   return (
@@ -44,6 +44,9 @@ const InputCpf = (props) => {
           onChange={(e) => handleChange(e)}
           onBlur={() => handleBlur()}
         />
+        <div style={{ color: 'red', fontSize: '1rem' }}>
+          {errorMsg}
+        </div>
       </fieldset>
     </React.Fragment>
   )
@@ -56,7 +59,7 @@ root.render(
         id='txtCpf'
         name='cpf'
         label='CPF'
-        value='1234567890'
+        value='01234567890'
         onChange={cpf => console.log(cpf)}
       />
     </div>
