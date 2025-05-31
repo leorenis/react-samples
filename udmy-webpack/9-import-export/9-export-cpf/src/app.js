@@ -5,8 +5,9 @@ import ReactDOM from 'react-dom/client'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 const InputCpf = (props) => {
-  const { id, name, label, value, onChange } = props
+  const { id, name, label, error, value, onChange } = props
   const [cpf, setCpf] = useState(value ?? '');
+  const [errorMsg, setErrorMsg] = useState(null)
 
   const handleChange = (event) => {
     setCpf(event.target.value)
@@ -20,6 +21,13 @@ const InputCpf = (props) => {
     const numbers = cpf.replace(/\D/g, '')
     const fmt = numbers.match(/.{1,3}/g).join(".").replace(/\.(?=[^.]*$)/,"-")
     setCpf(fmt)
+    const isValid = isCPF(fmt)
+    onChange({
+      cpf: fmt,
+      isValid
+    })
+
+    
   }
 
   return (
@@ -32,6 +40,7 @@ const InputCpf = (props) => {
           name={name}
           type='text'
           value={cpf}
+          maxLength={11}
           onChange={(e) => handleChange(e)}
           onBlur={() => handleBlur()}
         />
