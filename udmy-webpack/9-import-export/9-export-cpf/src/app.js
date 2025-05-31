@@ -1,5 +1,5 @@
 import React, { StrictMode, useState } from 'react'
-
+import { isCPF } from '@samplesleo/validations'
 import ReactDOM from 'react-dom/client'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
@@ -13,6 +13,15 @@ const InputCpf = (props) => {
     onChange(cpf)
   }
 
+  const handleBlur = () => {
+    if (!cpf)
+      return
+
+    const numbers = cpf.replace(/\D/g, '')
+    const fmt = numbers.match(/.{1,3}/g).join(".").replace(/\.(?=[^.]*$)/,"-")
+    setCpf(fmt)
+  }
+
   return (
     <React.Fragment>
       <fieldset>
@@ -24,6 +33,7 @@ const InputCpf = (props) => {
           type='text'
           value={cpf}
           onChange={(e) => handleChange(e)}
+          onBlur={() => handleBlur()}
         />
       </fieldset>
     </React.Fragment>
