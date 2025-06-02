@@ -13,6 +13,12 @@ const InputCpf = (props) => {
     onChange(cpf)
   }
 
+  const handleFocus = () => {
+    if (!cpf)
+      return
+    setCpf(cpf.replace(/\D/g, ''))
+  }
+
   const handleBlur = () => {
     if (!cpf)
       return
@@ -40,6 +46,7 @@ const InputCpf = (props) => {
           type='text'
           value={cpf}
           maxLength={11}
+          onFocus={() => handleFocus()}
           onChange={(e) => handleChange(e)}
           onBlur={() => handleBlur()}
         />
