@@ -1,13 +1,13 @@
-import HtmlWebpackPlugin from "html-webpack-plugin"
-
 const config = {
   mode: 'production',
   entry: '/src/app.js',
   output: {
-    publicPath: '/'
+    library: {
+      type: 'module'
+    }
   },
-  devServer: {
-    port: 3009,
+  experiments: {
+    outputModule: true,
   },
   resolve: {
     extensions: ['.js', '.jsx'],
