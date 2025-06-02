@@ -2,9 +2,11 @@ const config = {
   mode: 'production',
   entry: '/src/app.js',
   output: {
+    // filename: '[name].[contenthash].js',
     library: {
       type: 'module'
-    }
+    },
+    clean: true,
   },
   experiments: {
     outputModule: true,
