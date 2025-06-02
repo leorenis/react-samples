@@ -1,8 +1,7 @@
 import React, { StrictMode, useState } from 'react'
 import { isCPF } from '@samplesleo/validations'
 import ReactDOM from 'react-dom/client'
-
-const root = ReactDOM.createRoot(document.getElementById('root'))
+import { DEV_MODE } from './shared/consts.js'
 
 const InputCpf = (props) => {
   const { id, name, label, error, value, onChange } = props
@@ -52,16 +51,36 @@ const InputCpf = (props) => {
   )
 }
 
-root.render(
-  <StrictMode>
-    <div>
-      <InputCpf
-        id='txtCpf'
-        name='cpf'
-        label='CPF'
-        value='01234567890'
-        onChange={cpf => console.log(cpf)}
-      />
-    </div>
-  </StrictMode>
-)
+// Mount component function
+const mount = (element, {id, name, label, value, onChange}) => {
+  ReactDOM.createRoot(element).render(
+    <StrictMode>
+      <div>
+        <InputCpf
+          id={id}
+          name={name}
+          label={label}
+          value={value}
+          onChange={onChange}
+        />
+      </div>
+    </StrictMode>
+  )
+}
+
+// Performs only development mode
+if (process.env.NODE_ENV === DEV_MODE) {
+  const root = document.getElementById('root')
+  mount(root, {
+    id: 'txtInput',
+    name: 'txtInput',
+    label: 'CPF',
+    value: '01234567890',
+      onChange: (cpf) => {
+        console.log('CPF: ', cpf)
+      }
+    }
+  )
+}
+
+export { mount }
