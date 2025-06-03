@@ -18,6 +18,7 @@ Training webpack 5.
 - babel-loader
 - style-loader
 - css-loader
+- mini-css-extract-plugin
 - React
 - React-dom
 
