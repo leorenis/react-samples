@@ -10,10 +10,14 @@ const config = {
     port: 3010,
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.css'],
   },
   module: {
     rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader']
+      },
       {
         test: /\.js|jsx$/,
         exclude: /node_modules/,
