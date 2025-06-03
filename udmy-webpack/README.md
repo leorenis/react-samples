@@ -16,6 +16,8 @@ Training webpack 5.
 - Typescript
 - @babel
 - babel-loader
+- style-loader
+- css-loader
 - React
 - React-dom
 
