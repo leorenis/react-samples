@@ -40,7 +40,12 @@ const config = {
         }
       },
     ]
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'app.css',
+    })
+  ]
 }
 
 export default config
