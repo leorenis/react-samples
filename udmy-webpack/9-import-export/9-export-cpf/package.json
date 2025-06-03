@@ -1,6 +1,6 @@
 {
   "name": "@samplesleo/input-cpf",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Input CPF React sample",
   "main": "dist/index.bundle.js",
   "type": "module",
@@ -11,7 +11,7 @@
   ],
   "keywords": [
     "cpf",
-    "cnpj"
+    "validation"
   ],
   "scripts": {
     "dev": "webpack serve --config webpack.config.dev.js",
