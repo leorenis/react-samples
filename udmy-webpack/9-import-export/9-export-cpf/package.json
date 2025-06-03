@@ -8,6 +8,7 @@
   "license": "ISC",
   "scripts": {
     "dev": "webpack serve --config webpack.config.dev.js",
+    "validate": "webpack serve --config webpack.config.val.js",
     "build-production": "webpack --config webpack.config.prod.js"
   },
   "dependencies": {
