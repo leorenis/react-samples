@@ -8,8 +8,19 @@ npm i --save @samplesleo/input-cpf
 ## How to use
 
 ```javascript
-import { isCPF } from '@samplesleo/input-cpf'
+import { mount } from '@samplesleo/input-cpf'
 
-if (isCPF('1234567890')) {...}
+const root = document.getElementById('root')
+
+  mount(root, {
+    id: 'txtInput',
+    name: 'txtInput',
+    label: 'CPF',
+    value: '01234567890',
+      onChange: (cpf) => {
+        console.log('Validate: ', cpf)
+      }
+    }
+  )
 
 ```
