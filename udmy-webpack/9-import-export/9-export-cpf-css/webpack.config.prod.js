@@ -1,3 +1,5 @@
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+
 const config = {
   mode: 'production',
   entry: {
@@ -15,10 +17,17 @@ const config = {
     outputModule: true,
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.css'],
   },
   module: {
     rules: [
+      {
+        test: /\.css$/i, // For regular CSS files
+        use: [
+          MiniCssExtractPlugin.loader, // Extract CSS into files
+          'css-loader', // Turns CSS into CommonJS
+        ],
+      },
       {
         test: /\.js|jsx$/,
         exclude: /node_modules/,
