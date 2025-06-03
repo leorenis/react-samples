@@ -1,4 +1,4 @@
-import { mount } from '@renato-matos/input-cpf';
+import { mount } from '@samplesleo/input-cpf';
 
 const app = document.querySelector('#app');
 mount(app, {
