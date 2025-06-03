@@ -304,6 +304,10 @@ npm install --save-dev style-loader
 npm install --save-dev css-loader
 ```
 
+```zsh
+npm install --save-dev mini-css-extract-plugin
+```
+
 ### See more
 - https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
 - https://typicode.github.io/husky/
