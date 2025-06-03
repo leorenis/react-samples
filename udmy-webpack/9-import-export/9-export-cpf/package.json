@@ -1,6 +1,6 @@
 {
   "name": "@samplesleo/input-cpf",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Input CPF React sample",
   "main": "dist/index.bundle.js",
   "type": "module",
