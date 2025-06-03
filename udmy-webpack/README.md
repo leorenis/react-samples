@@ -15,6 +15,7 @@ Training webpack 5.
 - @eslint/config@latest
 - Typescript
 - @babel
+- babel-loader
 - React
 - React-dom
 
@@ -292,6 +293,12 @@ Additional labels for pre-release and build metadata are available as extensions
 npm login
 ```
 </details>
+
+### Loaders CSS
+
+```zsh
+npm install --save-dev style-loader
+```
 
 ### See more
 - https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
