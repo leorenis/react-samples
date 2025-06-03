@@ -2,6 +2,7 @@ import React, { StrictMode, useState } from 'react'
 import { isCPF } from '@samplesleo/validations'
 import ReactDOM from 'react-dom/client'
 import { DEV_MODE } from './shared/consts.js'
+import './app.css'
 
 const InputCpf = (props) => {
   const { id, name, label, error, value, onChange } = props
@@ -50,7 +51,7 @@ const InputCpf = (props) => {
           onChange={(e) => handleChange(e)}
           onBlur={() => handleBlur()}
         />
-        <div style={{ color: 'red', fontSize: '1rem' }}>
+        <div className='validation-error'>
           {errorMsg}
         </div>
       </fieldset>
