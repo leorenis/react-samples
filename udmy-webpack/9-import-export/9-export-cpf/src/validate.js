@@ -8,7 +8,7 @@ const root = document.getElementById('root')
     label: 'CPF',
     value: '01234567890',
       onChange: (cpf) => {
-        console.log('CPF: ', cpf)
+        console.log('Validate: ', cpf)
       }
     }
   )
