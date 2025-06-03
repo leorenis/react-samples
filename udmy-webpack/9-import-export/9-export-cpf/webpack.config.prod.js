@@ -1,8 +1,11 @@
 const config = {
   mode: 'production',
-  entry: '/src/app.js',
+  entry: {
+    index: '/src/app.js'
+  },
   output: {
     // filename: '[name].[contenthash].js',
+    filename: '[name].bundle.js',
     library: {
       type: 'module'
     },
