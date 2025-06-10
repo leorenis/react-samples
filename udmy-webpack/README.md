@@ -318,12 +318,19 @@ npm install --save-dev mini-css-extract-plugin
 
 - **style-loader:** injects the CSS into the page’s <style> tag
 - **css-loader:** allows you to import CSS files in JavaScript (import './index.css')
+- **@tailwindcss/postcss**PostCSS plugin that generates Tailwind CSS
 - **postcss-loader:** processes the CSS with Tailwind, Autoprefixer, etc.
 
 1. Install tailwind dependencies
 
 ```
 npm install tailwindcss postcss autoprefixer --save-dev
+```
+
+The package `@tailwindcss/postcss` was recently released to be the official Tailwind CSS plugin for PostCSS.
+
+```zsh
+npm install -D @tailwindcss/postcss
 ```
 
 2. Create or edit the configuration files
@@ -348,7 +355,7 @@ export default config
 ```js
 const config = {
   plugins: {
-    tailwindcss: {},
+    '@tailwindcss/postcss': {},
     autoprefixer: {},
   },
 }
