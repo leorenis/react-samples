@@ -323,15 +323,14 @@ npm install --save-dev mini-css-extract-plugin
 
 1. Install tailwind dependencies
 
-```
+```zsh
 npm install --save-dev tailwindcss @tailwindcss/postcss postcss postcss-loader
 ```
 
-The package `@tailwindcss/postcss` was recently released to be the official Tailwind CSS plugin for PostCSS.
+> The package `@tailwindcss/postcss` was recently released to be the official Tailwind CSS plugin for PostCSS.
 
-```zsh
-npm install -D @tailwindcss/postcss
-```
+To use the `npx tailwindcss init` command, also install:
+
 ```zsh
 npm install -D @tailwindcss/cli && npx tailwindcss init
 ```
@@ -339,6 +338,7 @@ npm install -D @tailwindcss/cli && npx tailwindcss init
 2. Create or edit the configuration files
 
 `tailwind.config.js`:
+
 ```js
 const config =  {
   content: [
