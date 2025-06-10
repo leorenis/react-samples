@@ -326,6 +326,30 @@ npm install --save-dev mini-css-extract-plugin
 npm install tailwindcss postcss autoprefixer --save-dev
 ```
 
+2. Create or edit the configuration files
+
+`tailwind.config.js`:
+```js
+const config =  {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}", // Isso é o "purge"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+export default config
+```
+
+`postcss.config.js`:
+
+```js
+
+```
+
+
 ### See more
 - https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
 - https://typicode.github.io/husky/
