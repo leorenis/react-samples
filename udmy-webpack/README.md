@@ -318,7 +318,7 @@ npm install --save-dev mini-css-extract-plugin
 
 - **style-loader:** injects the CSS into the page’s <style> tag
 - **css-loader:** allows you to import CSS files in JavaScript (import './index.css')
-- **@tailwindcss/postcss**PostCSS plugin that generates Tailwind CSS
+- **@tailwindcss/postcss** PostCSS plugin that generates Tailwind CSS
 - **postcss-loader:** processes the CSS with Tailwind, Autoprefixer, etc.
 
 1. Install tailwind dependencies
