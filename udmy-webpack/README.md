@@ -311,7 +311,7 @@ npm install --save-dev css-loader
 npm install --save-dev mini-css-extract-plugin
 ```
 
-### Tailwind css
+### Tailwind css (v4+)
 
 
 **Plugins:**
