@@ -340,6 +340,7 @@ npm install -D @tailwindcss/cli && npx tailwindcss init
 `tailwind.config.js`:
 
 ```js
+/** @type {import('tailwindcss').Config} */
 const config =  {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}", // Isso é o "purge"
@@ -356,6 +357,7 @@ export default config
 `postcss.config.js`:
 
 ```js
+// para ESModules
 const config = {
   plugins: {
     '@tailwindcss/postcss': {},
