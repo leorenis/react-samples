@@ -1,15 +1,15 @@
 import React, { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import { DEV_MODE } from './shared/consts.js'
+import SignIn from './components/signin/SignIn.js'
 import './app.css'
+
 
 // Mount component function
 const mount = (element) => {
   ReactDOM.createRoot(element).render(
     <StrictMode>
-      <div>
-        Login
-      </div>
+      <SignIn />
     </StrictMode>
   )
 }
