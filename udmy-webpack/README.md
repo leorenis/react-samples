@@ -343,7 +343,7 @@ npm install -D @tailwindcss/cli && npx tailwindcss init
 /** @type {import('tailwindcss').Config} */
 const config =  {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}", // Isso é o "purge"
+    "./src/**/*.{js,jsx,ts,tsx}", // This is the "purge"
   ],
   theme: {
     extend: {},
