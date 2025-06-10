@@ -356,6 +356,13 @@ const config = {
 export default config
 ```
 
+3. Create a file in `src/index.css` (or `tailwind.css`, whichever you prefer):
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
 
 ### See more
 - https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
