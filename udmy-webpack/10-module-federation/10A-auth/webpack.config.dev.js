@@ -1,13 +1,18 @@
-import HtmlWebpackPlugin from "html-webpack-plugin"
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
+const __dirname = path.resolve();
 const config = {
   mode: 'development',
-  entry: '/src/index.js',
+  entry: './src/index.js',
   output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
   devServer: {
     port: 3011,
+    historyApiFallback: true, // necessário para React Router
   },
   resolve: {
     extensions: ['.js', '.jsx', '.css'],
@@ -16,7 +21,7 @@ const config = {
     rules: [
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.js|jsx$/,
