@@ -363,6 +363,11 @@ export default config
 @tailwind utilities;
 ```
 
+4. Import this CSS in your entry point (e.g., `index.js` or `App.js`)
+
+```js
+import './index.css';
+```
 
 ### See more
 - https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
