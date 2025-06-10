@@ -311,6 +311,14 @@ npm install --save-dev css-loader
 npm install --save-dev mini-css-extract-plugin
 ```
 
+### Tailwind css
+
+1. Install tailwind dependencies
+
+```
+npm install tailwindcss postcss autoprefixer --save-dev
+```
+
 ### See more
 - https://webpack.js.org/configuration/optimization/#optimizationsplitchunks
 - https://typicode.github.io/husky/
