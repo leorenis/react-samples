@@ -1,4 +1,4 @@
-const config =  {
+const config = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}", // Isso é o "purge"
   ],
