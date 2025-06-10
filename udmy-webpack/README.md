@@ -324,13 +324,16 @@ npm install --save-dev mini-css-extract-plugin
 1. Install tailwind dependencies
 
 ```
-npm install tailwindcss postcss autoprefixer --save-dev
+npm install --save-dev tailwindcss @tailwindcss/postcss postcss postcss-loader
 ```
 
 The package `@tailwindcss/postcss` was recently released to be the official Tailwind CSS plugin for PostCSS.
 
 ```zsh
 npm install -D @tailwindcss/postcss
+```
+```zsh
+npm install -D @tailwindcss/cli && npx tailwindcss init
 ```
 
 2. Create or edit the configuration files
@@ -364,10 +367,10 @@ export default config
 ```
 
 3. Create a file in `src/index.css` (or `tailwind.css`, whichever you prefer):
+> [!TIP]
+> and in version 4
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 ```
 
 4. Import this CSS in your entry point (e.g., `index.js` or `App.js`)
@@ -385,3 +388,4 @@ import './index.css';
 - https://www.typescriptlang.org/docs/handbook/utility-types.html
 - https://semver.org/
 - https://docs.npmjs.com/cli/v8/configuring-npm/package-json#files
+- https://github.com/tailwindlabs/tailwindcss/discussions/15790
