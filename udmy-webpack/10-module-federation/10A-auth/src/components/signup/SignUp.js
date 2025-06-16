@@ -6,7 +6,9 @@ const SignUp = () => {
     <div className="max-w-2xl mx-auto mt-12 p-6 bg-white shadow-xl rounded-md">
       <div className="text-center mb-6">
         <UserPlusIcon className="h-6 w-6 text-blue-600 mx-auto" />
-        <h4 className="text-2xl font-semibold text-gray-800 mt-2">Registre-se</h4>
+        <h4 className="text-2xl font-semibold text-gray-800 mt-2">
+          Registre-se
+        </h4>
       </div>
 
       <form className="space-y-5">
