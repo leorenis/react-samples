@@ -11,7 +11,7 @@ const config = {
     publicPath: '/'
   },
   devServer: {
-    port: 3011,
+    port: 3012,
     historyApiFallback: true, // necessário para React Router
   },
   resolve: {
