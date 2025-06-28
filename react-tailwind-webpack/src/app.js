@@ -1,14 +1,14 @@
 import React, { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
 import { DEV_MODE } from './shared/consts.js'
-import Boxes from './components/boxes/Boxes.js'
 import './index.css'
+import Responsive from './components/breakpoints/Responsive.js'
 
 // Mount component function
 const mount = (element) => {
   ReactDOM.createRoot(element).render(
     <StrictMode>
-      <Boxes />
+      <Responsive />
     </StrictMode>
   )
 }
