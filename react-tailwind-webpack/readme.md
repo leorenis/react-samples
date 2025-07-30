@@ -3,14 +3,13 @@
 - Throubleshoting
 > Loading PostCSS "@tailwindcss/postcss" plugin failed: Unexpected token '??='
 > solution: 
-```bash
+```zsh
 nvm use 
 ```
 
-
 ### Loaders CSS
 
-```zsh
+```sh
 npm install --save-dev style-loader
 ```
 
