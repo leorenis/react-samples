@@ -1,3 +1,3 @@
 ## React Samples
 
-Monorepo containing all my samples and React PoCs.
+Monorepo containing all samples and React PoCs.
