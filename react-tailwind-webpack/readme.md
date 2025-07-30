@@ -9,7 +9,7 @@ nvm use
 
 ### Loaders CSS
 
-```sh
+```bash
 npm install --save-dev style-loader
 ```
 
