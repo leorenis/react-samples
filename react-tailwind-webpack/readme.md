@@ -87,7 +87,7 @@ export default config
 
 4. Import this CSS in your entry point (e.g., `index.js` or `App.js`)
 
-```js
+```javascript
 import './index.css';
 ```
 
