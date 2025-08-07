@@ -22,6 +22,8 @@ The `css-loader` interprets @import and `url()` like `import/require()` and will
 npm install --save-dev css-loader
 ```
 
+This plugin extracts CSS into separate files. It creates a CSS file for each JS file that contains CSS. It supports On-Demand-Loading of CSS and SourceMaps.
+
 ```zsh
 npm install --save-dev mini-css-extract-plugin
 ```
