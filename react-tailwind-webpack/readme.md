@@ -9,7 +9,10 @@ nvm use
 
 ### Loaders CSS
 
-```bash
+Inject CSS into the DOM.
+To begin, you'll need to install `style-loader`: 
+
+```zsh
 npm install --save-dev style-loader
 ```
 
