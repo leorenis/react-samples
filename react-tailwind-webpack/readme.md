@@ -30,7 +30,6 @@ npm install --save-dev mini-css-extract-plugin
 
 ### Tailwind css (v4+)
 
-
 **Plugins:**
 
 - **style-loader:** injects the CSS into the page’s <style> tag
