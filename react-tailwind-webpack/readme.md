@@ -16,7 +16,7 @@ To begin, you'll need to install `style-loader`:
 npm install --save-dev style-loader
 ```
 
-The `css-loader` interprets @import and `url()` like `import/require()` and will resolve them.
+The `css-loader` interprets `@import` and `url()` like `import/require()` and will resolve them.
 
 ```zsh
 npm install --save-dev css-loader
@@ -29,6 +29,7 @@ npm install --save-dev mini-css-extract-plugin
 ```
 
 ### Tailwind css (v4+)
+
 
 **Plugins:**
 
