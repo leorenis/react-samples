@@ -12,7 +12,7 @@ nvm use
 Inject CSS into the DOM.
 To begin, you'll need to install `style-loader`: 
 
-```zsh
+```bash
 npm install --save-dev style-loader
 ```
 
