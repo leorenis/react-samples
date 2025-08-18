@@ -18,7 +18,7 @@ npm install --save-dev style-loader
 
 The `css-loader` interprets `@import` and `url()` like `import/require()` and will resolve them.
 
-```bash
+```zsh
 npm install --save-dev css-loader
 ```
 
