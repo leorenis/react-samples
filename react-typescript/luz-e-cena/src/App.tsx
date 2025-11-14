@@ -1,9 +1,9 @@
+import Banner from "./components/Banner"
+
 function App() {
 
   return (
-    <h1>
-      Oi mundo react.
-    </h1>
+    <Banner src='./banner.png' alt='Onde a realidade encontra a fantasia!' />
   )
 }
 
