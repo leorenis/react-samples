@@ -7,4 +7,5 @@ const MenuList = ({ children }: React.HTMLAttributes<HTMLUListElement> ) => (
     </ul>
   </nav>
 )
+
 export default MenuList
