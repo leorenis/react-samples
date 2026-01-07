@@ -1,13 +1,11 @@
 import Banner from "./components/Banner"
-import Link from "./components/Link"
+import Header from "./components/Header"
 
 function App() {
 
   return (
   <>
-    <Link href="/">
-      Link
-    </Link>
+    <Header />
     <Banner src='./banner.png' alt='Onde a realidade encontra a fantasia!' />
   </>
   )
