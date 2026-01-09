@@ -74,3 +74,4 @@ export default defineConfig([
 
 ### Alura Project Github
 - https://github.com/alura-cursos/4472-react-ts/tree/aula-01
+
