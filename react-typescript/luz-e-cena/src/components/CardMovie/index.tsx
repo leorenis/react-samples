@@ -1,7 +1,8 @@
 import styles from './CardMovie.module.css'
 import Tag, { type Categoria, type Censura } from '../Tag'
 
-interface ICardMovieProps {
+export interface ICardMovieProps {
+  id: string;
   alt: string;
   src: string;
   titulo: string;
