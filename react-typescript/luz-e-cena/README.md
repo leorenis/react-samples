@@ -55,8 +55,8 @@ export default defineConfig([
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
-      // Others configs...
-      // Enables lint rules for React
+      // Other configs...
+      // Enable lint rules for React
       reactX.configs['recommended-typescript'],
       // Enable lint rules for React DOM
       reactDom.configs.recommended,
