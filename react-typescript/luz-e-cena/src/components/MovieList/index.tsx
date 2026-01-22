@@ -17,4 +17,3 @@ const MovieList = ({ movies }: IMovieListProps) => {
 
 export default MovieList
 
-
