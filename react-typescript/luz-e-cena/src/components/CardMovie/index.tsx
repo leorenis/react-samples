@@ -1,16 +1,6 @@
 import styles from './CardMovie.module.css'
-import Tag, { type Categoria, type Censura } from '../Tag'
-
-export interface ICardMovieProps {
-  id: string;
-  alt: string;
-  src: string;
-  titulo: string;
-  genero: string;
-  categoria: Categoria;
-  censura: Censura;
-  duracao: number
-}
+import Tag from '../Tag'
+import type { ICardMovieProps } from '../../types'
 
 const CardMovie = (props: ICardMovieProps) => {
   const { alt, src, titulo, genero, categoria, censura, duracao } = props

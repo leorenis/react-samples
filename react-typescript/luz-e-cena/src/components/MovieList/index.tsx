@@ -1,5 +1,6 @@
 import styles from './MovieList.module.css'
-import CardMovie, { type ICardMovieProps } from '../CardMovie'
+import CardMovie from '../CardMovie'
+import type { ICardMovieProps } from '../../types'
 
 export interface IMovieListProps {
   movies: ICardMovieProps[]
