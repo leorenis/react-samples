@@ -13,7 +13,6 @@ const useFetchMovies = (): [ICardMovieProps[], boolean, string | null] => {
       const movies = await fetchMovies();
       setMovies(movies)
     } catch (err) {
-      setIsLoading(false)
       setError('Error to fetch movies. Please, try again.')
       console.log(`Error: fetch /movies`, err)
     } finally {
