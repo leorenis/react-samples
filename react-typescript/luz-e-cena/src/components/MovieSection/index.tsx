@@ -4,27 +4,11 @@ import Fieldset from '../Fieldset'
 import InputText from '../InputText'
 import styles from './MovieSection.module.css'
 import MovieList from '../MovieList'
-import type { ICardMovieProps } from '../../types'
-import { useEffect, useState } from 'react'
-import { fetchMovies } from '../../api'
+import useFetchMovies from '../../hooks/useFetchMovies'
 
 const MovieSection = () => {
-  const [movies, setMovies] = useState<ICardMovieProps[]>([])
-
-  const handleFetchMovies = async () => {
-    try {
-      const movies = await fetchMovies();
-      setMovies(movies)
-    } catch (err) {
-      console.log(`Error: fetch /movies`, err)
-    }
-  }
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    handleFetchMovies()
-  }, [])
-
+const [ movies, isLoading, error ] = useFetchMovies()
+  console.log({isLoading, error })
   return (
     <main>
       <section className={styles.container}>
