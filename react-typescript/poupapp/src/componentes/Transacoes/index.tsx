@@ -96,7 +96,7 @@ const Transacoes = () => {
 
         <Modal
           ref={modalRef}
-          cliqueForaModal
+          cliqueForaModal={true}
           titulo="Adicionar transação"
           icon={<MoneyIcon />}
           aoClicar={() => {
