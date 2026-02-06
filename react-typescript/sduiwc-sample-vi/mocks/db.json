@@ -1,0 +1,100 @@
+{
+  "websections": {
+    "initial_template": {
+      "screens": [
+        {
+          "components": [
+            {
+              "order": 1,
+              "id": "sduiwc_main_header",
+              "toogle": true
+            },
+            {
+              "order": 2,
+              "id": "sduiwc_product_list",
+              "toogle": true
+            }
+          ],
+          "web_sections": {
+            "products_web_sections": {
+              "api": {
+                "endpoint": "/products",
+                "method": "GET",
+                "protocol": "http",
+                "request": {
+                  "headers": {},
+                  "body": {}
+                }
+              },
+              "ux": {
+                "height": "250px",
+                "width": "250px"
+              } 
+            }
+          }
+        }
+      ]
+    },
+    "components": {
+      "sduiwc_main_header": {
+        "name": "sduiwc-header",
+        "props": {
+          "classnames": "",
+          "title": "Salles"
+        },
+        "children": [
+          {
+            "order": 1,
+            "id": "sduiwc_icon_button",
+            "toggle": true
+          }
+        ]
+      },
+      "sduiwc_icon_button": {
+        "name": "sduiwc-icon-button",
+        "props": {
+          "classnames": "",
+          "icon": "help"
+        }
+      },
+      "sduiwc_product_list": {
+        "name": "sduiwc-list",
+        "props": {
+          "classnames": "",
+          "title": "Products"
+        },
+        "children": [
+          {
+            "order": 1,
+            "id": "sduiwc_list_item_1",
+            "toggle": true
+          },
+          {
+            "order": 2,
+            "id": "sduiwc_list_item_2",
+            "toggle": true
+          }
+        ]
+      },
+      "sduiwc_list_item_1": {
+        "name": "sduiwc-list-item",
+        "props": {
+          "classnames": "",
+          "name": "TV LG 60",
+          "price": "$ 600,00"
+        }
+      },
+      "sduiwc_list_item_2": {
+        "name": "sduiwc-list-item",
+        "props": {
+          "classnames": "",
+          "name": "TV Samsumg 60",
+          "price": "$ 721,00"
+        }
+      }
+    }
+  },
+  "section": {
+
+  }
+}
