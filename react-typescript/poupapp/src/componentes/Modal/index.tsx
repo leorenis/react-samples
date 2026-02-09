@@ -39,6 +39,7 @@ const Modal = forwardRef<ModalHandle, ModalProps>(({
   }));
 
   const aoClicarForaModal = (evento: React.MouseEvent<HTMLDialogElement>) => {
+    // console.log({cliqueForaModal, evento: evento.target, ref: dialogRef })
     if(cliqueForaModal && evento.target === dialogRef.current) {
       fecharModal();
     }
