@@ -2,13 +2,13 @@ import axios from 'axios'
 import { ITransacoes, IUsuario } from '../types'
 
 const api = axios.create({
-  baseURL: `http://localhost:5000/usuario`,
+  baseURL: `http://localhost:5000`,
 })
 
 const URI_USUARIOS = `/usuarios`
 const URI_TRANSACOES = `/transacoes`
 
-export const obterUsuario = async (): Promise<IUsuario[]> => {
+export const obterUsuarios = async (): Promise<IUsuario[]> => {
   const { data } = await api.get<IUsuario[]>(URI_USUARIOS)
   return data
 }
