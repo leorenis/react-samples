@@ -1,6 +1,7 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, ReactNode, useContext, useEffect, useState } from 'react'
-import { IUsuario } from '../types'
-import { obterUsuarios, criarUsuario } from '../api'
+import { ITransacoes, IUsuario } from '../types'
+import { obterUsuarios, criarUsuario, obterTransacoes, criarTransacao } from '../api'
 
 /**
  * Definição do tipo do contexto da aplicação.
@@ -8,10 +9,13 @@ import { obterUsuarios, criarUsuario } from '../api'
  * @typedef {Object} AppContextType
  * @property {IUsuario | null} usuario - O usuário atual armazenado no contexto.
  * @property {(usuarioForm: Omit<IUsuario, 'id'>) => Promise<void>} salvarUsuario - Função para salvar um novo usuário.
+ * @property {(transacaoForm: Omit<ITransacoes, 'id'>) => Promise<void>} salvarTransacoes - Função para salvar uma nova transação.
  */
 interface AppContextType {
   usuario: IUsuario | null,
+  transacoes: ITransacoes[] | null,
   salvarUsuario: (usuarioForm: Omit<IUsuario, 'id'>) => Promise<void>
+  salvarTransacoes: (transacaoForm: Omit<ITransacoes, 'id'>) => Promise<void>
 }
 
 /**
@@ -34,9 +38,11 @@ const AppContext = createContext<AppContextType | undefined>(undefined)
 
 const AppProvider = ({ children }: AppContextProps) => {
   const [usuario, setUsuario] = useState<IUsuario | null>(null)
+  const [transacoes, setTransacoes] = useState<ITransacoes[]>([])
 
   useEffect(() => {
     buscaUsuario()
+    buscaTransacoes()
   }, [])
 
   /**
@@ -75,8 +81,26 @@ const AppProvider = ({ children }: AppContextProps) => {
     }
   }
 
+  const buscaTransacoes = async () => {
+    try {
+      const transacoesObtidas = await obterTransacoes()
+      setTransacoes(transacoesObtidas)
+    } catch (err: unknown) {
+      console.log('Erro ao buscar transacoes', err);
+    }
+  }
+
+  const salvarTransacoes = async (formTransacao: Omit<ITransacoes, 'id'>) => {
+    try {
+      const transacaoCriada = await criarTransacao(formTransacao)
+      setTransacoes((prev) => [...prev, transacaoCriada])
+    } catch (err: unknown) {
+      console.log('Erro ao salvar transacoes', err);
+    }
+  }
+
   return (
-    <AppContext.Provider value={{usuario, salvarUsuario}}>
+    <AppContext.Provider value={{usuario, transacoes, salvarUsuario, salvarTransacoes}}>
       {children}
     </AppContext.Provider>
   )
