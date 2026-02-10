@@ -14,11 +14,12 @@ import CampoTexto from "../../componentes/CampoTexto/index.js";
 import Fieldset from "../../componentes/Fieldset/index.js";
 import Label from "../../componentes/Label/index.js";
 import { IUsuario } from "../../types/index.js";
-import { criarUsuario } from "../../api/index.js";
+import { useAppContext } from "../../context/AppContext.js";
 
 const Cadastro = () => {
   const [form, setForm] = useState<Omit<IUsuario, 'id'>>({ nome: '', renda: 0 })
   const navigate = useNavigate();
+  const { salvarUsuario } = useAppContext();
 
   const aoDigitarNoCampoTexto = (campo: 'nome' | 'renda', valor: string) => {
     setForm((prev) => ({ ...prev, [campo]: valor }))
@@ -27,7 +28,7 @@ const Cadastro = () => {
   const aoSubmeterFormulario = async (evento: React.FormEvent) => {
     evento.preventDefault();
     try {
-      const novoUsuario = await criarUsuario(form)
+      const novoUsuario = await salvarUsuario(form)
       console.log(novoUsuario)
     } catch (err: unknown) {
       console.warn('Falha ao criar usuário', err)

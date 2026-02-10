@@ -7,11 +7,11 @@ import { obterUsuarios, criarUsuario } from '../api'
  * 
  * @typedef {Object} AppContextType
  * @property {IUsuario | null} usuario - O usuário atual armazenado no contexto.
- * @property {(usuarioForm: Omit<IUsuario, 'id'>) => Promise<void>} definirUsuario - Função para definir um novo usuário.
+ * @property {(usuarioForm: Omit<IUsuario, 'id'>) => Promise<void>} salvarUsuario - Função para salvar um novo usuário.
  */
 interface AppContextType {
   usuario: IUsuario | null,
-  definirUsuario: (usuarioForm: Omit<IUsuario, 'id'>) => Promise<void>
+  salvarUsuario: (usuarioForm: Omit<IUsuario, 'id'>) => Promise<void>
 }
 
 /**
@@ -48,9 +48,12 @@ const AppProvider = ({ children }: AppContextProps) => {
   const buscaUsuario = async () => {
     try {
       const usuarios = await obterUsuarios()
-      if (usuarios.length > 0) {
-        setUsuario(usuarios[0])
+      const totalUsuarios = usuarios.length
+      if (!totalUsuarios) {
+        console.warn('Nenhum usuário encontrado');
       }
+      const key = totalUsuarios-1
+      setUsuario(usuarios[key])
     } catch (err: unknown) {
       console.log('Erro ao obter usuário', err);
     }
@@ -63,7 +66,7 @@ const AppProvider = ({ children }: AppContextProps) => {
    * @param {Omit<IUsuario, 'id'>} usuarioForm - Dados do novo usuário sem o campo 'id'.
    * @returns {Promise<void>} Retorna uma Promise que resolve quando o usuário for criado.
    */
-  const definirUsuario = async (usuarioForm: Omit<IUsuario, 'id'>) => {
+  const salvarUsuario = async (usuarioForm: Omit<IUsuario, 'id'>) => {
     try {
       const novoUsuario = await criarUsuario(usuarioForm)
       setUsuario(novoUsuario)
@@ -73,7 +76,7 @@ const AppProvider = ({ children }: AppContextProps) => {
   }
 
   return (
-    <AppContext.Provider value={{usuario, definirUsuario}}>
+    <AppContext.Provider value={{usuario, salvarUsuario}}>
       {children}
     </AppContext.Provider>
   )
@@ -82,7 +85,7 @@ const AppProvider = ({ children }: AppContextProps) => {
 /**
  * Hook customizado para acessar o contexto da aplicação.
  * 
- * @returns {AppContextType} O valor do contexto, contendo o usuário e a função de definir um novo usuário.
+ * @returns {AppContextType} O valor do contexto, contendo o usuário e a função de salvar um novo usuário.
  * @throws {Error} Lança um erro se o hook for utilizado fora de um provedor de contexto.
  */
 export const useAppContext = (): AppContextType => {
