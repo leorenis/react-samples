@@ -109,7 +109,11 @@ const AppProvider = ({ children }: AppContextProps) => {
 /**
  * Hook customizado para acessar o contexto da aplicação.
  * 
- * @returns {AppContextType} O valor do contexto, contendo o usuário e a função de salvar um novo usuário.
+ * @returns {AppContextType} O valor do contexto que contém:
+ *  - `usuario`: O usuário atual, ou `null` caso não haja um.
+ *  - `transacoes`: A lista de transações, ou `null` caso não haja transações.
+ *  - `salvarUsuario`: Função para salvar ou atualizar um usuário.
+ *  - `salvarTransacoes`: Função para salvar ou atualizar as transações.
  * @throws {Error} Lança um erro se o hook for utilizado fora de um provedor de contexto.
  */
 export const useAppContext = (): AppContextType => {
