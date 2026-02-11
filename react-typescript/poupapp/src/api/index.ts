@@ -54,5 +54,6 @@ export const criarTransacao = async (
   const saldo = calcularSaldo(transacoes);
   const novoOrcamentoDiario = usuario.renda / 30 + saldo;
   await atualizarUsuario(usuario.id, { orcamentoDiario: novoOrcamentoDiario })
+    .catch((err: unknown) => console.error(err))
   return data
 }
