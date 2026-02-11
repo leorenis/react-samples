@@ -1,4 +1,30 @@
 {
-  "usuarios": [],
-  "transacoes": []
+  "usuarios": [
+    {
+      "id": "d9b0",
+      "nome": "LR Doe",
+      "renda": "50000",
+      "orcamentoDiario": 1666.6666666666667
+    }
+  ],
+  "transacoes": [
+    {
+      "id": "9bbf",
+      "nome": "Compras do mes",
+      "valor": 500,
+      "tipo": "despesa",
+      "categoria": "Alimentação",
+      "data": "2026-02-11",
+      "userId": "d9b0"
+    },
+    {
+      "id": "3ffd",
+      "nome": "pix",
+      "valor": 500,
+      "tipo": "receita",
+      "categoria": "Pix",
+      "data": "2026-02-11",
+      "userId": "d9b0"
+    }
+  ]
 }

@@ -8,14 +8,14 @@ import { obterUsuarios, criarUsuario, obterTransacoes, criarTransacao } from '..
  * 
  * @typedef {Object} AppContextType
  * @property {IUsuario | null} usuario - O usuário atual armazenado no contexto.
- * @property {(usuarioForm: Omit<IUsuario, 'id'>) => Promise<void>} salvarUsuario - Função para salvar um novo usuário.
+ * @property {(usuarioForm: Omit<IUsuario, 'id' | 'orcamentoDiario'>) => Promise<void>} salvarUsuario - Função para salvar um novo usuário.
  * @property {(transacaoForm: Omit<ITransacoes, 'id'>) => Promise<void>} salvarTransacoes - Função para salvar uma nova transação.
  */
 interface AppContextType {
   usuario: IUsuario | null,
   transacoes: ITransacoes[] | null,
-  salvarUsuario: (usuarioForm: Omit<IUsuario, 'id'>) => Promise<void>
-  salvarTransacoes: (transacaoForm: Omit<ITransacoes, 'id'>) => Promise<void>
+  salvarUsuario: (usuarioForm: Omit<IUsuario, 'id' | 'orcamentoDiario'>) => Promise<void>
+  salvarTransacoes: (transacaoForm: Omit<ITransacoes, 'id' | 'userId'>) => Promise<void>
 }
 
 /**
@@ -69,10 +69,10 @@ const AppProvider = ({ children }: AppContextProps) => {
    * Função assíncrona que cria um novo usuário e atualiza o estado com o novo usuário.
    * 
    * @async
-   * @param {Omit<IUsuario, 'id'>} usuarioForm - Dados do novo usuário sem o campo 'id'.
+   * @param {Omit<IUsuario, 'id' | 'orcamentoDiario'>} usuarioForm - Dados do novo usuário sem o campo 'id'.
    * @returns {Promise<void>} Retorna uma Promise que resolve quando o usuário for criado.
    */
-  const salvarUsuario = async (usuarioForm: Omit<IUsuario, 'id'>) => {
+  const salvarUsuario = async (usuarioForm: Omit<IUsuario, 'id' | 'orcamentoDiario'>) => {
     try {
       const novoUsuario = await criarUsuario(usuarioForm)
       setUsuario(novoUsuario)
@@ -90,10 +90,14 @@ const AppProvider = ({ children }: AppContextProps) => {
     }
   }
 
-  const salvarTransacoes = async (formTransacao: Omit<ITransacoes, 'id'>) => {
+  const salvarTransacoes = async (formTransacao: Omit<ITransacoes, 'id' | 'userId'>) => {
     try {
-      const transacaoCriada = await criarTransacao(formTransacao)
-      setTransacoes((prev) => [...prev, transacaoCriada])
+      if (!usuario) {
+        throw new Error('Nao podemos criar transacoes sem userId')
+      }
+      const {transacao, novoOrcamentoDiario} = await criarTransacao(formTransacao, usuario)
+      setTransacoes((prev) => [...prev, transacao])
+      setUsuario((prev) => prev ? {...prev, orcamentoDiario: novoOrcamentoDiario } : null)
     } catch (err: unknown) {
       console.log('Erro ao salvar transacoes', err);
     }

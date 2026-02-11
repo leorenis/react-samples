@@ -44,9 +44,9 @@ export const obterTransacoes = async (): Promise<ITransacoes[]> => {
 }
 
 export const criarTransacao = async (
-  transacao: Omit<ITransacoes, 'id'>,
+  transacao: Omit<ITransacoes, 'id' | 'userId'>,
   usuario: Omit<IUsuario, 'nome'>,
-) => {
+): Promise<{ transacao: ITransacoes, novoOrcamentoDiario: number }> => {
   const transacaoComUserId = { ...transacao, userId: usuario.id}
   const { data } = await api.post<ITransacoes>(URI_TRANSACOES, transacaoComUserId)
 
@@ -55,5 +55,5 @@ export const criarTransacao = async (
   const novoOrcamentoDiario = usuario.renda / 30 + saldo;
   await atualizarUsuario(usuario.id, { orcamentoDiario: novoOrcamentoDiario })
     .catch((err: unknown) => console.error(err))
-  return data
+  return { transacao: data, novoOrcamentoDiario }
 }
