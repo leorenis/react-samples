@@ -40,7 +40,7 @@ export const ListaMovimentacoes = styled.ul`
 `;
 
 const Transacoes = () => {
-  const [novaTransacao, setNovaTransacao] = useState<Omit<ITransacoes, 'id'>>({
+  const [novaTransacao, setNovaTransacao] = useState<Omit<ITransacoes, 'id' | 'userId'>>({
     nome: "",
     valor: 0,
     tipo: "receita",
