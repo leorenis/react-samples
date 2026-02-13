@@ -4,7 +4,7 @@
       "id": "d9b0",
       "nome": "LR Doe",
       "renda": "50000",
-      "orcamentoDiario": 1666.6666666666667
+      "orcamentoDiario": -281.0633333333333
     }
   ],
   "transacoes": [
@@ -24,6 +24,42 @@
       "tipo": "receita",
       "categoria": "Pix",
       "data": "2026-02-11",
+      "userId": "d9b0"
+    },
+    {
+      "id": "a953",
+      "nome": "Pirulito",
+      "valor": 1,
+      "tipo": "despesa",
+      "categoria": "Alimentação",
+      "data": "2026-02-12",
+      "userId": "d9b0"
+    },
+    {
+      "id": "2c07",
+      "nome": "Almoço",
+      "valor": 36.73,
+      "tipo": "despesa",
+      "categoria": "Alimentação",
+      "data": "2026-02-11",
+      "userId": "d9b0"
+    },
+    {
+      "id": "dcbb",
+      "nome": "Conta de luz",
+      "valor": 210,
+      "tipo": "despesa",
+      "categoria": "Despesas fixas",
+      "data": "2026-02-10",
+      "userId": "d9b0"
+    },
+    {
+      "id": "c075",
+      "nome": "Mensalidade Faculdade",
+      "valor": 1700,
+      "tipo": "despesa",
+      "categoria": "Estudos",
+      "data": "2026-02-10",
       "userId": "d9b0"
     }
   ]
