@@ -13,3 +13,4 @@ const useGastosCategoria = (): Record<string, number> => {
   return gastosPorCategoria ?? {}
 }
 export default useGastosCategoria
+
