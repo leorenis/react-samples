@@ -57,4 +57,3 @@ export const criarTransacao = async (
     .catch((err: unknown) => console.error(err))
   return { transacao: data, novoOrcamentoDiario }
 }
-
