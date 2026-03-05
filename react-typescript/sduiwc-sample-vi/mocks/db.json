@@ -1,40 +1,40 @@
 {
-  "websections": {
-    "initial_template": {
-      "screens": [
-        {
-          "components": [
-            {
-              "order": 1,
-              "id": "sduiwc_main_header",
-              "toogle": true
+  "analytics": {},
+  "template": {
+    "screens": [
+      {
+        "id": "home",
+        "components": [
+          {
+            "order": 1,
+            "id": "sduiwc_main_header",
+            "toogle": true
+          },
+          {
+            "order": 2,
+            "id": "sduiwc_product_list",
+            "toogle": true
+          }
+        ],
+        "web_sections": {
+          "products_web_sections": {
+            "api": {
+              "endpoint": "/products",
+              "method": "GET",
+              "protocol": "http",
+              "request": {
+                "headers": {},
+                "body": {}
+              }
             },
-            {
-              "order": 2,
-              "id": "sduiwc_product_list",
-              "toogle": true
-            }
-          ],
-          "web_sections": {
-            "products_web_sections": {
-              "api": {
-                "endpoint": "/products",
-                "method": "GET",
-                "protocol": "http",
-                "request": {
-                  "headers": {},
-                  "body": {}
-                }
-              },
-              "ux": {
-                "height": "250px",
-                "width": "250px"
-              } 
-            }
+            "ux": {
+              "height": "250px",
+              "width": "250px"
+            } 
           }
         }
-      ]
-    },
+      }
+    ],
     "components": {
       "sduiwc_main_header": {
         "name": "sduiwc-header",
@@ -93,8 +93,5 @@
         }
       }
     }
-  },
-  "section": {
-
   }
 }
